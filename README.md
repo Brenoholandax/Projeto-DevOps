@@ -1,2 +1,69 @@
-# Projeto-DevOps
-Projeto DevOps para disciplina, representando 40% da nota da 2ª avaliação. A aplicação inclui funcionalidades GET e POST com JSON, front-end e back-end, opcionalmente integrando um banco de dados. Utiliza Docker para containerização. GIT gerencia o código-fonte com 3 branches no GitHub. Postman e Zabbix são usados para testes e monitoramento.
+# Mentoria - API Laravel
+
+## Diretórios
+
+- src = Aplicação wordpress
+- db = Arquivos do banco de dados (Local!!! Não subir para o git)
+- DockerConfig = Arquivos de configuração do Docker
+
+## Como rodar
+
+### Levanta o ambiente (na raiz)
+
+```bash
+docker-compose up --build -d
+```
+
+### Derrubar o container (na raiz)
+
+```bash
+docker-compose down 
+```
+
+### verifica se o container estar de pé 
+
+```bash
+docker ps
+```
+
+### Acessando o container da aplicação
+
+```bash
+docker exec -it aula-laravel bash
+```
+
+### Instalando as dependencias
+
+```bash
+composer install
+```
+
+### Rodando as migrations
+
+```bash
+php artisan migrate
+```
+
+### Acessando a ROTA (Trocar {rota} pelo nome da rota criado)
+
+```bash
+localhost/api/{rota}
+```
+
+
+
+##############################################################################
+
+#outros
+
+### Acessando o container do Banco de Dados
+
+```bash
+docker exec -it banco bash
+```
+
+### Se tiver problema no Windows
+
+```
+ --config core.autocrlf=input
+```
