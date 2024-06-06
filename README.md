@@ -1,4 +1,4 @@
-# Mentoria - API Laravel
+ API Laravel
 
 ## Diretórios
 
